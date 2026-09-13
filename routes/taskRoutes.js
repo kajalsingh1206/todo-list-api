@@ -8,21 +8,26 @@ const {
     deleteTask
 } = require("../controllers/taskController");
 
+const protect = require("../middleware/authMiddleware");
+
 const router = express.Router();
 
-// Create a task
+// All task routes require login
+router.use(protect);
+
+// Create task
 router.post("/", createTask);
 
 // Get all tasks
 router.get("/", getTasks);
 
-// Get a single task
+// Get single task
 router.get("/:id", getTaskById);
 
-// Update a task
+// Update task
 router.put("/:id", updateTask);
 
-// Delete a task
+// Delete task
 router.delete("/:id", deleteTask);
 
 module.exports = router;
