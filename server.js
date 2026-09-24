@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const taskRoutes = require("./routes/taskRoutes");
+const productRoutes = require("./routes/productRoutes");
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 
 // Task routes
 app.use("/api/tasks", taskRoutes);
+app.use("/api/products", productRoutes);
 
 // MongoDB connection
 mongoose

@@ -8,6 +8,9 @@ import {
 
 import { useState, useEffect } from "react";
 
+import Shop from "./Shop";
+import Cart from "./Cart";
+
 // ================= HOME =================
 
 function Home() {
@@ -680,7 +683,11 @@ function App() {
                     path="/upload"
                     element={<ImageUpload />}
                 />
-
+                    <Route
+                        path="/shop"
+                        element={<Shop />}
+                    />
+                    <Route path="/cart" element={<Cart />} />
             </Routes>
         </BrowserRouter>
     );
