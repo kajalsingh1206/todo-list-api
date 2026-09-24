@@ -316,7 +316,7 @@ function Dashboard() {
     const updateTask = async (id) => {
         try {
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${id}`,
+                `https://todo-list-api-o9pj.onrender.com/api/tasks/${id}`,
                 {
                     method: "PUT",
                     headers: {
@@ -350,7 +350,7 @@ function Dashboard() {
     const deleteTask = async (id) => {
         try {
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${id}`,
+                `https://todo-list-api-o9pj.onrender.com/api/tasks/${id}`,
                 {
                     method: "DELETE",
                     headers: {

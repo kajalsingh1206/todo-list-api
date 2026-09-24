@@ -6,7 +6,7 @@ function Shop() {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/products")
+       fetch("https://todo-list-api-o9pj.onrender.com/api/products")
             .then((response) => response.json())
             .then((data) => {
                 setProducts(data);
