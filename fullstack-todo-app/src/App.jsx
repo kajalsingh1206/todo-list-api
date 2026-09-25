@@ -43,7 +43,7 @@ function Register() {
 
         try {
             const response = await fetch(
-                "http://localhost:5001/api/auth/register",
+                "https://todo-auth-api-ag0a.onrender.com/api/auth/register",
                 {
                     method: "POST",
                     headers: {
@@ -138,9 +138,9 @@ function Login() {
         event.preventDefault();
 
         try {
-            const response = await fetch(
-                "http://localhost:5001/api/auth/login",
+            const response = await fetch("https://todo-auth-api-ag0a.onrender.com/api/auth/login", 
                 {
+
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
